@@ -52,14 +52,14 @@ export default function SearchPanel({ setData }: SearchPanelProps) {
 	return (
 		<div >
 			<form className="flex w-full pb-4" onSubmit={handleSubmit}>
-				<input className="border-1 border-gray-700 rounded-md" value={query} onChange={(e) => setQuery(e.target.value)} />
+				<input className="border-1 border-gray-200 dark:border-gray-700 rounded-md" value={query} onChange={(e) => setQuery(e.target.value)} />
 				<Popover.Root>
 					<Popover.Trigger asChild>
 						<img className="clickable" src="/wrench.svg" width={30} />
 					</Popover.Trigger>
 					<Popover.Portal>
 						<Popover.Content
-							className="z-20 rounded p-4 w-[500px] bg-white dark:bg-[#111] border-2 border-gray-700"
+							className="z-20 rounded p-4 w-[500px] bg-white dark:bg-[#111] border-2 border-gray-200 dark:border-gray-700"
 							sideOffset={5}
 						>
 							<div className="flex flex-col gap-2.5">
