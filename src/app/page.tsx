@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import NewsCard from "@/components/newsCard";
+import SearchPanel from "@/components/searchPanel";
 
 import type { NewsApiResponse } from '@/types/newsResponse';
 
@@ -32,6 +33,7 @@ export default function NewsPage() {
   return (
     <div className="p-6 max-w-4xl mx-auto">
       <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">Latest News</h2>
+      <SearchPanel setData={setData} />
       <ul className="space-y-4">
         {data.articles.map((article, i) => (
           <NewsCard key={i} article={article} index={i} />
