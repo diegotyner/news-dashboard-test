@@ -10,7 +10,7 @@ import type { NewsApiResponse } from '@/types/newsResponse';
 export default function NewsPage() {
   const [data, setData] = useState<NewsApiResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [live, setLive] = useState<boolean>(false);
+  // const [live, setLive] = useState<boolean>(false);
 
   useEffect(() => {
     async function fetchNews() {
@@ -22,6 +22,7 @@ export default function NewsPage() {
         setData(json.data);
       } catch (err) {
         setError("Failed to load news.");
+        console.log(err);
       }
     }
     fetchNews();

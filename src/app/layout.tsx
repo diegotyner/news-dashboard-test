@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 // import Nav from "@/components/nav";
 import '@/styles/globals.css'
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "News Dashboard",

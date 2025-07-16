@@ -3,7 +3,7 @@
 import * as Popover from "@radix-ui/react-popover";
 import * as Switch from "@radix-ui/react-switch";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import type { SearchPanelProps } from "@/types/searchPanelProps";
 import { CategorySelect } from "./categorySelect";
 import Image from "next/image";
@@ -16,7 +16,7 @@ export default function SearchPanel({ setData }: SearchPanelProps) {
 	// One of the following needs to be filled out for a valid API call to be made
 	// const req_opts_top = ["country", "category", "sources", "q", "language"];
 	// const req_opts_every = ["q", "qInTitle", "sources", "domains"];
-	const categories = ["business", 'entertainment', 'general', 'health', 'science', 'sports', 'technology']
+	// const categories = ["business", 'entertainment', 'general', 'health', 'science', 'sports', 'technology']
 
 	async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
 		e.preventDefault()
